@@ -11,12 +11,14 @@ class AddProduct  extends StatelessWidget {
   AddProduct(this.canteenName);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(body: ProductAdd(canteenName),),);
+    return MaterialApp(home: Scaffold(body: ProductAdd(canteenName),
+    ),
+    );
   }
 }
 
 
-// ignore: must_be_immutable
+//ignore: must_be_immutable
 class ProductAdd extends StatefulWidget {
   String canteenName;
   ProductAdd(this.canteenName);
@@ -27,8 +29,8 @@ class ProductAdd extends StatefulWidget {
   }
 }
 
-// Create a corresponding State class.
-// This class holds data related to the form.
+//Create a corresponding State class.
+//This class holds data related to the form.
 class _ProductAddState extends State<ProductAdd> {
   String canteenName;
   _ProductAddState(this.canteenName);

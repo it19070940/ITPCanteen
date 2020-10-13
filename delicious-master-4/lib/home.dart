@@ -1,3 +1,4 @@
+import 'package:delicious/generatemain.dart';
 import 'package:delicious/origin.dart';
 import 'package:delicious/productTest.dart';
 import 'package:delicious/reportMain.dart';
@@ -245,12 +246,24 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      drawer: Drawer(
+      drawer: new Drawer(
+         child: new ListView(
           // Add a ListView to the drawer. This ensures the user can scroll
           // through the options in the drawer if there isn't enough vertical
           // space to fit everything.
-
-          ),
-    );
+     children: <Widget>[
+            new DrawerHeader(
+                child: new Text('Header'),
+                decoration: BoxDecoration(
+                  color: Colors.green,
+                )),     
+new ListTile(
+              title: new Text('Generate Qr code'),
+              onTap: () => Navigator.of(context).push(new CupertinoPageRoute(
+                  builder: (BuildContext context) =>HomePage())),
+            ),
+      ] ),
+    
+    ));
   }
 }
